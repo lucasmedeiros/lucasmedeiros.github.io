@@ -23,4 +23,22 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+
+.sectionTitle {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ccc;
+  color: rgb(45, 45, 45);
+}
+
+.wrap {
+  padding: 2.5em;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url("~assets/fonts/Proxima_Nova_Semibold.otf");
+}
 </style>

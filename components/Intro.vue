@@ -3,6 +3,7 @@
     <div class="header">
       <img src="~/assets/photo.jpg" alt="Minha foto" class="photo">
       <h1 class="title">Lucas Medeiros</h1>
+      <h5 class="subtitle">Full-stack software developer</h5>
       <div class="icons">
         <a href="https://www.linkedin.com/in/lucasmnf/" target="_blank">
           <font-awesome-icon :icon="['fab', 'linkedin']"/>
@@ -25,10 +26,6 @@
 </template>
 
 <style scoped>
-@font-face {
-  font-family: 'ProximaNova';
-  src: url("~assets/fonts/Proxima_Nova_Semibold.otf");
-}
 
 .container {
   font-family: 'ProximaNova';
@@ -66,8 +63,14 @@
   margin: 20px 0px 20px 0px;
 }
 
+.subtitle {
+  font-family: 'ProximaNova';
+  font-size: 1.5em;
+  letter-spacing: .2em;
+}
+
 .icons {
-  margin-top: 5vh;
+  margin-top: 2vh;
   letter-spacing: 10px;
 }
 

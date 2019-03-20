@@ -1,9 +1,9 @@
 <template>
-<section class="card" :class="project.class">
-  <a :href="project.site" target="_blank">
+<section :class="project.classes" class="wrap">
+  <a class="projectTitle" :href="project.site" target="_blank">
     {{ project.title }}
   </a>
-  <p>{{ project.description }}</p>
+  <p class="projectDescription">{{ project.description }}</p>
 </section>
 </template>
 
@@ -23,14 +23,24 @@ export default {
 .card {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-items: center;
   flex: 1 1;
   transition: .5s;
+  flex-shrink: 0;
   color: white;
 }
 
-.active {
-  flex: 100% 1 !important;
+.projectTitle {
+  font-family: 'ProximaNova';
+  text-align: center; 
+  text-decoration: none;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: white;
+}
+
+.projectDescription {
+  text-align: justify;
 }
 
 .even {
@@ -38,10 +48,12 @@ export default {
 }
 
 .odd {
-  background-color: darkslategray;
+  background-color: rgb(60, 60, 60);
 }
 
-.card:hover {
-  flex: 2 1;
+@media (min-width: 900px) {
+  .card:hover {
+    flex: 2 1;
+  }
 }
 </style>
