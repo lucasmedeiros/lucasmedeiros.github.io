@@ -1,10 +1,6 @@
 import pkg from './package'
 
 export default {
-  router : {
-    base: '/portfolio/'
-  },
-  
   mode: 'universal',
 
   /*
