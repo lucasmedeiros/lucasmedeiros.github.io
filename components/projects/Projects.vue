@@ -35,8 +35,8 @@ export default {
           classes: ['card', 'even']
         },
         {
-          title: "Comments Section",
-          description: "Pequeno sistema de comentários simples com JQuery e PHP, com conexão a banco de dados com MySQL.",
+          title: "Laboratório de Matemática",
+          description: "Sistema web para um cursinho isolado de preparação para o Enem.",
           site: "https://github.com/lukehxh",
           classes: ['card', 'odd']
         },

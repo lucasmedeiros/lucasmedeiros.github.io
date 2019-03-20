@@ -3,7 +3,7 @@
     <div class="header">
       <img src="~/assets/photo.jpg" alt="Minha foto" class="photo">
       <h1 class="title">Lucas Medeiros</h1>
-      <h5 class="subtitle">Full-stack software developer</h5>
+      <h5 class="subtitle">Full-stack software development</h5>
       <div class="icons">
         <a href="https://www.linkedin.com/in/lucasmnf/" target="_blank">
           <font-awesome-icon :icon="['fab', 'linkedin']"/>
@@ -16,6 +16,9 @@
         </a>
         <a href="https://twitter.com/lukehxh" target="_blank">
           <font-awesome-icon :icon="['fab', 'twitter']"/>
+        </a>
+        <a href="https://www.instagram.com/lukehxh/" target="_blank">
+          <font-awesome-icon :icon="['fab', 'instagram']"/>
         </a>
         <a href="mailto:lucasmed812@gmail.com" target="_blank">
           <font-awesome-icon :icon="['fas', 'envelope']"/>
@@ -87,6 +90,10 @@
 
   .title {
     font-size: 2.5em;
+  }
+
+  .subtitle {
+    font-size: 1em;
   }
 }
 </style>

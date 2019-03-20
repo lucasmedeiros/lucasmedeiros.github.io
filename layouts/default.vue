@@ -28,13 +28,14 @@ html {
   width: 100%;
   padding: 20px;
   margin-bottom: 20px;
+  font-size: 2.5em;
+  text-align: center;
   text-transform: uppercase;
-  border-bottom: 1px solid #ccc;
   color: rgb(45, 45, 45);
 }
 
 .wrap {
-  padding: 2.5em;
+  padding: 2.8em;
 }
 
 @font-face {
