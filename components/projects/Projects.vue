@@ -17,28 +17,22 @@ export default {
     return {
       projects : [
         {
-          title: "Um título vem aqui",
-          description: "Uma descrição vem aqui",
-          site: "https://github.com/lukehxh",
-          classes: ['card', 'even']
-        },
-        {
           title: "OpenDev UFCG Website",
           description: "Website for showing important information about the OpenDevUFCG organization.",
           site: "https://opendevufcg.org/",
-          classes: ['card', 'odd']
+          classes: ['card', 'even']
         },
         {
           title: "Laboratório de Matemática",
           description: "Web system for a course focused on preparing students for ENEM.",
           site: "http://labdematematica.com.br/",
-          classes: ['card', 'even']
+          classes: ['card', 'odd']
         },
         {
-          title: "Project Manager",
-          description: "Small project manager made with HTML, JQuery/AJAX, PHP, MySQL, designed with CSS3 and Bootstrap.",
-          site: "https://github.com/LukeHxH/ProjectManager",
-          classes: ['card', 'odd']
+          title: "CCC Pharma App",
+          description: "Management web system for a new pharmacy in Campina Grande.",
+          site: "http://cccpharma-site-jjlm.herokuapp.com/index.html",
+          classes: ['card', 'even']
         },
       ]
     }
@@ -53,7 +47,7 @@ export default {
 }
 
 .projects {
-  height: 55vh;
+  height: 50vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
