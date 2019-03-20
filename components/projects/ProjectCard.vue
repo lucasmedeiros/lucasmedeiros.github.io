@@ -1,5 +1,5 @@
 <template>
-<section :class="project.classes" class="wrap">
+<section :class="project.classes">
   <a class="projectTitle" :href="project.site" target="_blank">
     {{ project.title }}
   </a>
@@ -24,23 +24,27 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   flex: 1 1;
   transition: .5s;
   flex-shrink: 0;
   color: white;
+  padding: 3em;
 }
 
 .projectTitle {
   font-family: 'ProximaNova';
-  text-align: center; 
   text-decoration: none;
   font-size: 1.5em;
+  min-height: 12vh;
   margin-bottom: 1em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
   color: white;
 }
 
 .projectDescription {
-  text-align: justify;
+  line-height: 1.5;
 }
 
 .even {

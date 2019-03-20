@@ -1,6 +1,6 @@
 <template>
 <section class="container wrap">
-  <h1 class="sectionTitle">Some projects</h1>
+  <h1 class="sectionTitle">Notable projects</h1>
   <div class="projects">
     <project-card v-for="p in projects" :project="p" :key="p.title" />
   </div>
@@ -23,21 +23,21 @@ export default {
           classes: ['card', 'even']
         },
         {
-          title: "Usjaodb dfhdf sdfusdf",
-          description: "Uma descrição vem aqui",
-          site: "https://github.com/lukehxh",
+          title: "OpenDev UFCG Website",
+          description: "Website for showing important information about the OpenDevUFCG organization.",
+          site: "https://opendevufcg.org/",
           classes: ['card', 'odd']
         },
         {
-          title: "Terceiro projeto",
-          description: "Uma descrição vem aqui porque eu simplesmente não sei o que escrever",
-          site: "https://github.com/lukehxh",
+          title: "Laboratório de Matemática",
+          description: "Web system for a course focused on preparing students for ENEM.",
+          site: "http://labdematematica.com.br/",
           classes: ['card', 'even']
         },
         {
-          title: "Laboratório de Matemática",
-          description: "Sistema web para um cursinho isolado de preparação para o Enem.",
-          site: "https://github.com/lukehxh",
+          title: "Project Manager",
+          description: "Small project manager made with HTML, JQuery/AJAX, PHP, MySQL, designed with CSS3 and Bootstrap.",
+          site: "https://github.com/LukeHxH/ProjectManager",
           classes: ['card', 'odd']
         },
       ]
@@ -53,7 +53,7 @@ export default {
 }
 
 .projects {
-  height: 50vh;
+  height: 55vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

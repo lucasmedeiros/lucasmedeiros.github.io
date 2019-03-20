@@ -26,7 +26,6 @@ html {
 
 .sectionTitle {
   width: 100%;
-  padding: 20px;
   margin-bottom: 20px;
   font-size: 2.5em;
   text-align: center;
@@ -34,8 +33,23 @@ html {
   color: rgb(45, 45, 45);
 }
 
+a {
+  text-decoration: none;
+  color: darkcyan;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .wrap {
-  padding: 2.8em;
+  padding: 1.5em 5em 1.5em 5em;
+}
+
+@media (max-width: 800px) {
+  .wrap {
+    padding: 2.8em;
+  }
 }
 
 @font-face {
