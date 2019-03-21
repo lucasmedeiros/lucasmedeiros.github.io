@@ -1,9 +1,9 @@
 <template>
 <section :class="project.classes">
-  <a class="projectTitle" :href="project.site" target="_blank">
-    {{ project.title }}
+  <a :href="project.site" target="_blank">
+    <p class="projectTitle">{{ project.title }}</p>
+    <p class="projectDescription">{{ project.description }}</p>
   </a>
-  <p class="projectDescription">{{ project.description }}</p>
 </section>
 </template>
 
@@ -29,6 +29,12 @@ export default {
   transition: .5s;
   flex-shrink: 0;
   color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  height: 100%;
   padding: 3em;
 }
 

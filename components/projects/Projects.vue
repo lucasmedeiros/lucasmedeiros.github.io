@@ -1,6 +1,6 @@
 <template>
 <section class="container wrap">
-  <h1 class="sectionTitle">Notable projects</h1>
+  <h1 class="sectionTitle">Notable works</h1>
   <div class="projects">
     <project-card v-for="p in projects" :project="p" :key="p.title" />
   </div>
@@ -31,7 +31,7 @@ export default {
         {
           title: "CCC Pharma App",
           description: "Management web system for a new pharmacy in Campina Grande.",
-          site: "http://cccpharma-site-jjlm.herokuapp.com/index.html",
+          site: "http://cccpharma-site-jjlm.herokuapp.com/",
           classes: ['card', 'even']
         },
       ]

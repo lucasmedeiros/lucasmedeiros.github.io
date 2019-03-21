@@ -1,7 +1,7 @@
 <template>
   <div class="text">
       <p>
-        My full name's Lucas de Medeiros Nunes Fernandes and I'm
+        My full name's Lucas de Medeiros Nunes Fernandes, I'm
         {{ calculateAge() }} years old and I live in Campina Grande
         - PB, Brazil. I'm a Computer Technician at IFRN - Campus
         Caicó since 2016, and currently I'm an undergraduate student
@@ -11,26 +11,25 @@
       </p>
       
       <p>
-        I am experienced with mobile (Android) software development due to 
+        I've experienced mobile (Android) software development due to 
         projects I've participated while studying at IFRN, working on an 
-        educational game focused on making math learning funnier, and an 
+        educational game focused on making math learning more fun, and an 
         application for controlling electronic circuits via Wi-Fi.
       </p>
 
       <p>
         My web development experience also started at IFRN with HTML, CSS,
         JavaScript, PHP and connection with SQL database. Since then, I improved
-        myself a lot about all of these technologies, mainly the last JavaScript
-        updates (ES6 and further) and PHP. I  also experienced Vue/Nuxt, a modern
+        myself about all of these technologies, mainly the last JavaScript
+        updates (ES6 and further) and PHP 7. I've also experienced Vue/Nuxt, a modern
         web development framework, as I entered
-        <a href="https://opendevufcg.org/" target="_blank">
+        <a href="https://github.com/OpenDevUFCG/" target="_blank">
           OpenDevUFCG organization</a>.
       </p>
 
       <p>
         Besides Computer Science, I love football (or soccer, whatever) and I'm a 
-        Flamengo supporter. I also love music (I have such an ecletic taste
-        in music) and gaming.
+        Flamengo supporter. I also love music and gaming.
       </p>
   </div>
 </template>
