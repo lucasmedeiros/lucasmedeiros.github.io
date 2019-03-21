@@ -1,22 +1,26 @@
-# portfolio
+# Portfolio
 
-> lukehxh.github.io/portfolio
+Um portfolio com algumas informações sobre mim, você pode acessar o site [clicando aqui](lukehxh.github.io/portfolio).
 
-## Build Setup
+## Rodar com npm
+
+Caso queira rodar o código em sua máquina, você precisa ter o `vue` instalado em sua máquina, junto com `nuxt`.
+
+### Instalar dependências
 
 ``` bash
-# install dependencies
 $ npm install
+```
 
-# serve with hot reload at localhost:3000
+### Rodar em modo development, com hot reload ativado
+``` bash
 $ npm run dev
+```
+Ficará hospedado em `localhost:3000`
 
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
+### Gerar o site estático
+``` bash
 $ npm run generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+Para mais detalhes, dê uma olhada na [documentação do Nuxt](https://nuxtjs.org).
