@@ -1,6 +1,6 @@
 # Portfolio
 
-Um portfolio com algumas informações sobre mim, você pode acessar o site [clicando aqui](lukehxh.github.io/portfolio).
+Um portfolio com algumas informações sobre mim, você pode acessar o site [clicando aqui](/portfolio).
 
 ## Rodar com npm
 
