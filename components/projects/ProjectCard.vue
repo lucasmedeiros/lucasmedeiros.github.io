@@ -36,6 +36,10 @@ a {
   color: white;
   height: 100%;
   padding: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
 .projectTitle {
@@ -64,6 +68,10 @@ a {
 @media (min-width: 900px) {
   .card:hover {
     flex: 2 1;
+  }
+
+  .projectDescription {
+    max-width: 20vw;
   }
 }
 </style>

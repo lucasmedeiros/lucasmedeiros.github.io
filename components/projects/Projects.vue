@@ -4,6 +4,9 @@
   <div class="projects">
     <project-card v-for="p in projects" :project="p" :key="p.title" />
   </div>
+  <p>
+    If you want to see more, visit my <a href="https://github.com/LukeHxH" target="_blank">Github page</a>.
+  </p>
 </section>
 </template>
 
@@ -47,10 +50,14 @@ export default {
 }
 
 .projects {
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+p {
+  margin-top: 5px;
 }
 
 </style>

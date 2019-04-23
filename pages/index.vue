@@ -3,6 +3,7 @@
     <Intro />
     <About />
     <Projects />
+    <Footer />
   </div>
 </template>
 
@@ -10,10 +11,11 @@
 import Intro from '~/components/Intro.vue'
 import About from '~/components/about/About.vue'
 import Projects from '~/components/projects/Projects.vue'
+import Footer from '~/components/footer/Footer.vue'
 
 export default {
   components: {
-    Intro, About, Projects
+    Intro, About, Projects, Footer
   }
 }
 </script>

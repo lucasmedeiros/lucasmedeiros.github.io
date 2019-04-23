@@ -20,16 +20,18 @@
         <a href="https://www.instagram.com/lukehxh/" target="_blank">
           <font-awesome-icon :icon="['fab', 'instagram']"/>
         </a>
-        <a href="mailto:lucasmed812@gmail.com" target="_blank">
-          <font-awesome-icon :icon="['fas', 'envelope']"/>
-        </a>
       </div>
     </div>
   </section>
 </template>
 
-<style scoped>
+<script>
+export default {
+  name: "Intro"
+}
+</script>
 
+<style scoped>
 .container {
   font-family: 'ProximaNova';
   background-image: url('~assets/background.jpg');
@@ -40,7 +42,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
 }
 
 .header {

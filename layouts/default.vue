@@ -43,12 +43,32 @@ a:hover {
 }
 
 .wrap {
-  padding: 1.5em 5em 1.5em 5em;
+  padding: 2em 5em 2em 5em;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 8px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.oblique {
+  font-style: oblique;
+}
+
+.no-style-ul {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 800px) {
   .wrap {
-    padding: 2.8em;
+    padding: 1.5em;
   }
 }
 
