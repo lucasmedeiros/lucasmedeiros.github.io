@@ -2,7 +2,7 @@
 <section class="container wrap">
   <h1 class="sectionTitle">Notable works</h1>
   <div class="projects">
-    <project-card v-for="p in projects" :project="p" :key="p.title" />
+    <project-card v-for="proj in mainProjects" :project="proj" :key="proj.title" />
   </div>
   <p>
     If you want to see more, visit my <a href="https://github.com/LukeHxH" target="_blank">Github page</a>.
@@ -18,10 +18,10 @@ export default {
   components: { ProjectCard },
   data() {
     return {
-      projects : [
+      mainProjects : [
         {
           title: "OpenDev UFCG Website",
-          description: "Website for showing important information about the OpenDevUFCG organization.",
+          description: "Website for showing important information about OpenDevUFCG.",
           site: "https://opendevufcg.org/",
           classes: ['card', 'even']
         },
@@ -37,6 +37,14 @@ export default {
           site: "http://cccpharma-site-jjlm.herokuapp.com/",
           classes: ['card', 'even']
         },
+      ],
+
+      otherProjects : [
+        {
+          title: "",
+          description: "",
+          site: ""
+        }
       ]
     }
   }
@@ -50,7 +58,7 @@ export default {
 }
 
 .projects {
-  min-height: 50vh;
+  min-height: 45vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
