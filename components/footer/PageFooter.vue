@@ -14,14 +14,14 @@ import MiddleFooter from './MiddleFooter.vue';
 import RightFooter from './RightFooter.vue';
 
 export default {
-  name: 'Footer',
+  name: 'PageFooter',
   components: { LeftFooter, MiddleFooter, RightFooter }
 }
 </script>
 
 <style scoped>
 .footer {
-  min-height: 30vh;
+  min-height: 20vh;
   color: white;
   background-color: rgb(10, 10, 10);
 }

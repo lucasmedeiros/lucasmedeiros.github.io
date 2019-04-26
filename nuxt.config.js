@@ -1,4 +1,5 @@
 import pkg from './package'
+// import { REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN } from './config';
 
 export default {
   mode: 'universal',
@@ -39,6 +40,8 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    // ['@nuxtjs/apollo'],
+
     [
       'nuxt-fontawesome', {
         imports: [
@@ -54,6 +57,24 @@ export default {
       }
     ]
   ],
+
+  // // Give apollo module options
+  // apollo: {
+  //   errorHandler (error) {
+  //     console.log('%cError', 'background: red; color: white; padding: 2px 4px; border-radius: 3px; font-weight: bold;', error.message)
+  //   },
+
+  //   clientConfigs: {
+  //     default: {
+  //       httpEndpoint: 'https://api.github.com/graphql',
+  //       httpLinkOptions: {
+  //         headers: {
+  //           authorization: `Bearer ${REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`
+  //         }
+  //       }
+  //     }
+  //   }
+  // },
 
   /*
   ** Build configuration
