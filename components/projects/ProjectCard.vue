@@ -38,7 +38,7 @@ a {
   padding: 3em;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 

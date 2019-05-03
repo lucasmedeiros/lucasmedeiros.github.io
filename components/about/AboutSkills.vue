@@ -68,32 +68,38 @@
       <input id="collapsible" class="toggle" type="checkbox" />
       <label for="collapsible" class="lbl-toggle">
         <font-awesome-icon :icon="['fas', 'project-diagram']"/>
-        Frameworks
+        Frameworks / Technologies
       </label>
       <div class="collapsible-content">
         <div class="content-inner">
           <ul>
             <li>
               <dl>
-                <dt>Vue/Nuxt</dt>
+                <dt>Vue</dt>
+              </dl>
+            </li>
+
+            <li>
+              <dl>
+                <dt>React</dt>
+              </dl>
+            </li>
+
+            <li>
+              <dl>
+                <dt>Node</dt>
+              </dl>
+            </li>
+
+            <li>
+              <dl>
+                <dt>SpringBoot</dt>
               </dl>
             </li>
 
             <li>
               <dl>
                 <dt>Bootstrap</dt>
-              </dl>
-            </li>
-
-            <li>
-              <dl>
-                <dt>JUnit</dt>
-              </dl>
-            </li>
-
-            <li>
-              <dl>
-                <dt>JQuery</dt>
               </dl>
             </li>
           </ul>

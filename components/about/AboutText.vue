@@ -21,10 +21,11 @@
         My web development experience also started at IFRN with HTML, CSS,
         JavaScript, PHP and connection with SQL database. Since then, I improved
         myself about all of these technologies, mainly the last JavaScript
-        updates (ES6 and further) and PHP 7. I've also experienced Vue/Nuxt, a modern
-        web development framework, as I entered
-        <a href="https://github.com/OpenDevUFCG/" target="_blank">
-          OpenDevUFCG organization</a>.
+        updates (ES6 and further) and PHP 7. I've also experienced
+        <a href="https://github.com/vuejs/vue" target="_blank">Vue</a>
+        and <a href="https://github.com/facebook/react" target="_blank">React</a>,
+        modern web development frameworks, plus development of GraphQL (with Node) and REST 
+        (with SpringBoot) APIs.
       </p>
 
       <p>
@@ -38,11 +39,12 @@
 export default {
   name: 'Text',
   methods: {
-      calculateAge() {
-      let birth = new Date('06/29/1998');
-      let today = new Date();
+      calculateAge: () => {
+      const birth = new Date('06/29/1998');
+      const today = new Date();
+      const m = today.getMonth() - birth.getMonth();
+      
       let age = today.getFullYear() - birth.getFullYear();
-      let m = today.getMonth() - birth.getMonth();
 
       if (m < 0 || (m == 0 && today.getDate() < birth.getDate())) {
           age--;

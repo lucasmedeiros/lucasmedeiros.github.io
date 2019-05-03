@@ -40,8 +40,6 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    // ['@nuxtjs/apollo'],
-
     [
       'nuxt-fontawesome', {
         imports: [
