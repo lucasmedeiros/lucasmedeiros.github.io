@@ -38,7 +38,7 @@ export default {
   padding: 5px;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 760px) {
   .footerContent {
     grid-template-columns: 1fr;
   }

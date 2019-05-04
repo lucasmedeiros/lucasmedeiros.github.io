@@ -1,10 +1,15 @@
 <template>
 <section class="container wrap">
   <h1 class="sectionTitle">Notable works</h1>
-  <div class="projects">
+  <div class="main-projects">
     <project-card v-for="proj in mainProjects" :project="proj" :key="proj.title" />
   </div>
-  <p>
+
+  <h1 class="sectionTitle">Other projects</h1>
+  <div class="other-projects">
+    <project-extra v-for="otherProj in otherProjects" :project="otherProj" :key="otherProj.title" />
+  </div>
+  <p class="more-paragraph">
     If you want to see more, visit my <a href="https://github.com/LukeHxH" target="_blank">Github page</a>.
   </p>
 </section>
@@ -12,40 +17,19 @@
 
 <script>
 import ProjectCard from './ProjectCard.vue';
+import ProjectExtra from './ProjectExtra.vue';
+import projects from './projects';
+
+const mainProjects = projects.mainProjects;
+const otherProjects = projects.otherProjects;
 
 export default {
   name: 'Projects',
-  components: { ProjectCard },
+  components: { ProjectCard, ProjectExtra },
   data() {
     return {
-      mainProjects : [
-        {
-          title: "OpenDev UFCG Website",
-          description: "Website for showing important information about OpenDevUFCG.",
-          site: "https://opendevufcg.org/",
-          classes: ['card', 'even']
-        },
-        {
-          title: "Laboratório de Matemática",
-          description: "Web system for a course focused on preparing students for ENEM.",
-          site: "http://labdematematica.com.br/",
-          classes: ['card', 'odd']
-        },
-        {
-          title: "CCC Pharma App",
-          description: "Management web system for a new pharmacy in Campina Grande.",
-          site: "http://cccpharma-site-jjlm.herokuapp.com/",
-          classes: ['card', 'even']
-        },
-      ],
-
-      otherProjects : [
-        {
-          title: "",
-          description: "",
-          site: ""
-        }
-      ]
+      mainProjects,
+      otherProjects
     }
   }
 }
@@ -57,15 +41,35 @@ export default {
   flex-direction: column;
 }
 
-.projects {
+.main-projects {
   min-height: 45vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 15px;
 }
 
-p {
-  margin-top: 5px;
+.other-projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-sizing: inherit;
+  grid-gap: 1em;
+}
+
+.more-paragraph {
+  margin-top: 10px;
+}
+
+@media (max-width: 720px) {
+  .other-projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 425px) {
+  .other-projects {
+    grid-template-columns: 12fr;
+  }
 }
 
 </style>

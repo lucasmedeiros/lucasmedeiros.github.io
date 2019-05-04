@@ -37,7 +37,7 @@
 
 <script>
 export default {
-  name: 'Text',
+  name: 'AboutText',
   methods: {
       calculateAge: () => {
       const birth = new Date('06/29/1998');

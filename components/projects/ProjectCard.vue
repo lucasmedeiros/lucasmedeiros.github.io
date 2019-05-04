@@ -1,10 +1,10 @@
 <template>
-<section :class="project.classes">
+<article :class="project.classes">
   <a :href="project.site" target="_blank">
     <p class="projectTitle">{{ project.title }}</p>
     <p class="projectDescription">{{ project.description }}</p>
   </a>
-</section>
+</article>
 </template>
 
 <script>
@@ -14,8 +14,8 @@ export default {
     project: {
       type: Object,
       default: null
-    }
-  }
+    },
+  },
 }
 </script>
 
