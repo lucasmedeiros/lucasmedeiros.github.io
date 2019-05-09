@@ -1,7 +1,6 @@
 <template>
   <section class="about wrap">
-    <h1 class="sectionTitle">About me</h1>
-
+    <h1 class="sectionTitle uppercase">About me</h1>
     <div class="info">
       <AboutText />
       <AboutSkills />

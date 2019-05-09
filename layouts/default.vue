@@ -29,7 +29,6 @@ html {
   margin-bottom: 20px;
   font-size: 2.5em;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(45, 45, 45);
 }
 
@@ -57,6 +56,22 @@ a:hover {
 
 .oblique {
   font-style: oblique;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 .no-style-ul {

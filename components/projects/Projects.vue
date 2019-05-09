@@ -1,11 +1,11 @@
 <template>
 <section class="container wrap">
-  <h1 class="sectionTitle">Notable works</h1>
+  <h1 class="sectionTitle uppercase">Notable works</h1>
   <div class="main-projects">
     <project-card v-for="proj in mainProjects" :project="proj" :key="proj.title" />
   </div>
 
-  <h1 class="sectionTitle">Other projects</h1>
+  <h1 class="sectionTitle uppercase">Other projects</h1>
   <div class="other-projects">
     <project-extra v-for="otherProj in otherProjects" :project="otherProj" :key="otherProj.title" />
   </div>
@@ -54,6 +54,7 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   box-sizing: inherit;
   grid-gap: 1em;
+  align-items: stretch;
 }
 
 .more-paragraph {

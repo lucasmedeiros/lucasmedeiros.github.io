@@ -6,7 +6,7 @@
 	<div class="card-content">
 		<p> {{ project.description }} </p>
 	</div>
-	<button class="bold" v-on:click="accessSite(project.site)"> See more </button>
+	<button class="bold uppercase" v-on:click="accessSite(project.site)"> Access </button>
 </article>
 </template>
 
@@ -34,34 +34,36 @@ export default {
 
 <style scoped>
 .card {
-	border: 1px solid rgb(100, 100, 100);
-	border-radius: .25rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	padding: 0 20px 20px;
+	border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
 }
 
 .card-title {
-	padding: 1em;
+	padding: 1.2em 0 0 0;
+	font-size: 1.2em;
 	font-family: 'Inconsolata', monospace;
 }
 
 .card-content {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
-	height: 100%;
-	font-size: .9em;
+	height: 20vh;
 	padding: 1em;
 }
 
 button {
-	color: #fff;
-  background-color: rgb(20, 20, 20);;
+	color: white;
+  background-color: rgb(60, 60, 60);
   border: none;
-	font-size: 1.4em;
-  padding: .5rem 1rem;
+	font-size: 1.2em;
+	padding: 10px;
+	width: 100%;
   cursor: pointer;
 }
 </style>
