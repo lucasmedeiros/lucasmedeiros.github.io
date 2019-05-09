@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="footerContent wrap">
       <left-footer class="grid-item" />
       <right-footer class="grid-item" />

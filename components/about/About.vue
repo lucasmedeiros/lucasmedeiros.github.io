@@ -1,5 +1,5 @@
 <template>
-  <section class="about wrap">
+  <section id="about" class="about wrap">
     <h1 class="sectionTitle uppercase">About me</h1>
     <div class="info">
       <AboutText />

@@ -21,13 +21,17 @@
           <font-awesome-icon :icon="['fab', 'instagram']"/>
         </a>
       </div>
+      <scroll-down idPath="#about" />
     </div>
   </section>
 </template>
 
 <script>
+import ScrollDown from './ScrollDown.vue';
+
 export default {
-  name: "Intro"
+  name: "Intro",
+  components: { ScrollDown },
 }
 </script>
 

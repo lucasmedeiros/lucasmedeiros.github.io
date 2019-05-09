@@ -65,5 +65,10 @@ button {
 	padding: 10px;
 	width: 100%;
   cursor: pointer;
+	transition: all .25s;
+}
+
+button:hover {
+	background-color: rgb(40, 40, 40);
 }
 </style>
