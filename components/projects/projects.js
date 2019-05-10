@@ -27,7 +27,7 @@ const otherProjects = [
   },
   {
     title: 'profile-finder',
-    description: `A React application with Apollo for consuming data from the Github's GraphQL API, fetching data from Github users from the given username.`,
+    description: `A React application with Apollo for consuming data from Github's GraphQL API, by fetching data from Github users from the given username.`,
     site: 'https://github.com/LukeHxH/profile-finder',
   },
   {
@@ -46,7 +46,12 @@ const otherProjects = [
     site: 'https://github.com/LukeHxH/doom-fire',
   },
   {
-    title: 'ProjectManager',
+    title: 'comments-section',
+    description: `Simple comment system with JQuery, PHP and database connection with MySQL.`,
+    site: 'https://github.com/LukeHxH/comments-section',
+  },
+  {
+    title: 'project-manager',
     description: `Small project manager using PHP, MySQL, HTML, JQuery, CSS3 and Bootstrap.`,
     site: 'https://github.com/LukeHxH/ProjectManager',
   },
