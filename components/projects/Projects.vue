@@ -61,7 +61,7 @@ export default {
   margin-top: 10px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 780px) {
   .other-projects {
     grid-template-columns: repeat(2, 1fr);
   }
