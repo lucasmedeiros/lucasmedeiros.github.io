@@ -23,12 +23,12 @@ const otherProjects = [
   {
     title: 'youtube-videomaker',
     description: "Robots for automating the creation and upload of videos to YouTube.",
-    site: "https://github.com/LukeHxH/youtube-videomaker",
+    site: "https://github.com/lucasmedeiros/youtube-videomaker",
   },
   {
     title: 'profile-finder',
     description: `A React application with Apollo for consuming data from Github's GraphQL API, by fetching data from Github users from the given username.`,
-    site: 'https://github.com/LukeHxH/profile-finder',
+    site: 'https://github.com/lucasmedeiros/profile-finder',
   },
   {
     title: 'tamburetei',
@@ -38,22 +38,22 @@ const otherProjects = [
   {
     title: 'crimson-plague',
     description: `RPG game called "Crimson Plague", implemented in different programming paradigms.`,
-    site: 'https://github.com/LukeHxH/crimson-plague',
+    site: 'https://github.com/lucasmedeiros/crimson-plague',
   },
   {
     title: 'doom-fire',
     description: `Implementation of the fire effect from "DOOM", game released in 1993, using JavaScript (ES6).`,
-    site: 'https://github.com/LukeHxH/doom-fire',
+    site: 'https://github.com/lucasmedeiros/doom-fire',
   },
   {
     title: 'comments-section',
     description: `Simple comment system with JQuery, PHP and database connection with MySQL.`,
-    site: 'https://github.com/LukeHxH/comments-section',
+    site: 'https://github.com/lucasmedeiros/comments-section',
   },
   {
     title: 'project-manager',
     description: `Small project manager using PHP, MySQL, HTML, JQuery, CSS3 and Bootstrap.`,
-    site: 'https://github.com/LukeHxH/ProjectManager',
+    site: 'https://github.com/lucasmedeiros/ProjectManager',
   },
 ];
 
