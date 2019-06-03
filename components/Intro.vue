@@ -8,7 +8,7 @@
         <a href="https://www.linkedin.com/in/lucasmnf/" target="_blank">
           <font-awesome-icon :icon="['fab', 'linkedin']"/>
         </a>
-        <a href="https://www.github.com/lukehxh/" target="_blank">
+        <a href="https://www.github.com/lucasmedeiros/" target="_blank">
           <font-awesome-icon :icon="['fab', 'github']"/>
         </a>
         <a href="https://www.facebook.com/lucas.pmm" target="_blank">
