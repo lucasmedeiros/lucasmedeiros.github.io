@@ -15,6 +15,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -79,6 +80,19 @@ a:hover {
   display: block;
   margin: 0;
   padding: 0;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+html::-webkit-scrollbar {
+  background-color: white;
+  width: 6px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgb(10, 10, 10);
 }
 
 @media (max-width: 800px) {

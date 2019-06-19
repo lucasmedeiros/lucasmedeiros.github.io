@@ -42,7 +42,7 @@ export default {
 }
 
 .main-projects {
-  min-height: 45vh;
+  min-height: 35vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
