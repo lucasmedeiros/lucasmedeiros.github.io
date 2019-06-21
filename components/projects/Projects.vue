@@ -61,6 +61,12 @@ export default {
   margin-top: 10px;
 }
 
+@media (max-height: 720px) {
+  .main-projects {
+    min-height: 45vh;
+  }
+}
+
 @media (max-width: 780px) {
   .other-projects {
     grid-template-columns: repeat(2, 1fr);

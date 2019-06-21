@@ -15,7 +15,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 *,
@@ -83,11 +82,11 @@ a:hover {
 }
 
 html::-webkit-scrollbar-track {
-  background-color: #fff;
+  background-color: aliceblue;
 }
 
 html::-webkit-scrollbar {
-  background-color: white;
+  background-color: #fff;
   width: 6px;
 }
 
