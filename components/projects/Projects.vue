@@ -10,7 +10,7 @@
     <project-extra v-for="otherProj in otherProjects" :project="otherProj" :key="otherProj.title" />
   </div>
   <p class="more-paragraph">
-    If you want to see more, visit my <a href="https://github.com/LukeHxH" target="_blank">Github page</a>.
+    If you want to see more, visit my <a href="https://github.com/lucasmedeiros" target="_blank">Github page</a>.
   </p>
 </section>
 </template>
