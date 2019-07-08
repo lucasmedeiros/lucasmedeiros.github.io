@@ -29,7 +29,6 @@ export default {
 
 <style scoped>
 .container {
-  background-color: rgb(22, 22, 22);
   min-height: 10vh;
   display: flex;
   align-items: center;

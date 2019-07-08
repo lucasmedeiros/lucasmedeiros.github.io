@@ -13,7 +13,11 @@
         </li>
         <li>
           <font-awesome-icon :icon="['fab', 'whatsapp']"/>
-          <span class="contact">+55 (84) 98604-5422</span>
+          <span class="contact">+55 (84) 99921-3854</span>
+        </li>
+        <li>
+          <font-awesome-icon :icon="['fas', 'map-marker-alt']"/>
+          <span class="contact">Campina Grande, Brazil</span>
         </li>
       </ul>
     </div>
