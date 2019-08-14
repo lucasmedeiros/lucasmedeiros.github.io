@@ -41,11 +41,6 @@ const otherProjects = [
     site: 'https://github.com/lucasmedeiros/crimson-plague',
   },
   {
-    title: 'doom-fire',
-    description: `Implementation of the fire effect from "DOOM", game released in 1993, using JavaScript (ES6).`,
-    site: 'https://github.com/lucasmedeiros/doom-fire',
-  },
-  {
     title: 'comments-section',
     description: `Simple comment system with JQuery, PHP and database connection with MySQL.`,
     site: 'https://github.com/lucasmedeiros/comments-section',
@@ -54,6 +49,16 @@ const otherProjects = [
     title: 'project-manager',
     description: `Small project manager using PHP, MySQL, HTML, JQuery, CSS3 and Bootstrap.`,
     site: 'https://github.com/lucasmedeiros/ProjectManager',
+  },
+  {
+    title: 'todo-list-vue',
+    description: `A simple and basic to-do list with Vue.js and Bootstrap.`,
+    site: 'https://github.com/lucasmedeiros/todo-list-vue',
+  },
+  {
+    title: 'doom-fire',
+    description: `Implementation of the fire effect from "DOOM", game released in 1993, using JavaScript (ES6).`,
+    site: 'https://github.com/lucasmedeiros/doom-fire',
   },
 ];
 

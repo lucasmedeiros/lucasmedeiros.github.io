@@ -75,13 +75,13 @@
           <ul>
             <li>
               <dl>
-                <dt>Vue</dt>
+                <dt>React</dt>
               </dl>
             </li>
-
+            
             <li>
               <dl>
-                <dt>React</dt>
+                <dt>Vue</dt>
               </dl>
             </li>
 
