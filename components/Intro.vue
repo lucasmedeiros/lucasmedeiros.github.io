@@ -60,7 +60,7 @@ export default {
 
 .photo {
   max-width: 30vh;
-  border-radius: 360px;
+  border-radius: 100%;
   box-shadow: 0px 5px 10px rgba(0,0,0,.5);
 }
 
