@@ -1,4 +1,5 @@
 # Portfolio
+[![Build Status](https://travis-ci.com/lucasmedeiros/portfolio.svg?branch=master)](https://travis-ci.com/lucasmedeiros/portfolio)
 
 Um portfolio com algumas informações sobre mim, você pode acessar o site [clicando aqui](https://lucasfernandes.me/).
 
