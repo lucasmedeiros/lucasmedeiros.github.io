@@ -33,7 +33,9 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/vue-smooth-scroll'],
+  plugins: [
+    {src: '~/plugins/vue-smooth-scroll'},
+  ],
 
   /*
   ** Nuxt.js modules
