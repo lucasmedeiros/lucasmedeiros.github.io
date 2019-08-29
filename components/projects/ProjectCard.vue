@@ -46,7 +46,8 @@ a {
   font-family: 'ProximaNova';
   text-decoration: none;
   font-size: 1.5em;
-  min-height: 12vh;
+  height: 12vh;
+  min-width: 15vw;
   margin-bottom: 1em;
   padding-bottom: 10px;
   border-bottom: 2px solid white;

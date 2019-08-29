@@ -1,14 +1,14 @@
 const mainProjects = [
   {
-    title: "OpenDev UFCG Website",
-    description: "Website for showing important information about OpenDevUFCG.",
-    site: "https://opendevufcg.org/",
+    title: "Tindev App",
+    description: "App similar to Tinder for finding developers to work together!",
+    site: "https://lucasmedeiros.github.io/tindev/#/",
     classes: ['card', 'even'],
   },
   {
-    title: "Laboratório de Matemática",
-    description: "Web system for a course focused on preparing students for ENEM.",
-    site: "http://labdematematica.com.br/",
+    title: "OpenDev UFCG",
+    description: "Website for showing important information about OpenDevUFCG.",
+    site: "https://opendevufcg.org/",
     classes: ['card', 'odd'],
   },
   {
@@ -20,6 +20,11 @@ const mainProjects = [
 ];
 
 const otherProjects = [
+  {
+    title: "laboratório-de-matemática",
+    description: "Web system for a course focused on preparing students for ENEM.",
+    site: "http://labdematematica.com.br/",
+  },
   {
     title: 'youtube-videomaker',
     description: "Robots for automating the creation and upload of videos to YouTube.",

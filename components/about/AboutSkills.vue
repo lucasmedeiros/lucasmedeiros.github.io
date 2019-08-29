@@ -96,12 +96,6 @@
                 <dt>SpringBoot</dt>
               </dl>
             </li>
-
-            <li>
-              <dl>
-                <dt>Bootstrap</dt>
-              </dl>
-            </li>
           </ul>
         </div>
       </div>
