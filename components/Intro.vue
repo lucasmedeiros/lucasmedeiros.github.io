@@ -14,9 +14,6 @@
         <a href="https://www.facebook.com/lucas.pmm" target="_blank">
           <font-awesome-icon :icon="['fab', 'facebook']"/>
         </a>
-        <a href="https://twitter.com/lukehxh" target="_blank">
-          <font-awesome-icon :icon="['fab', 'twitter']"/>
-        </a>
         <a href="https://www.instagram.com/lukehxh/" target="_blank">
           <font-awesome-icon :icon="['fab', 'instagram']"/>
         </a>
