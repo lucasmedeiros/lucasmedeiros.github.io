@@ -7,6 +7,9 @@
       <a href="https://www.github.com/lucasmedeiros/" target="_blank">
         <font-awesome-icon :icon="['fab', 'github']"/>
       </a>
+      <a href="https://www.youtube.com/channel/UCLlxw0ys56q3t0JJhPOw4-w/videos" target="_blank">
+          <font-awesome-icon :icon="['fab', 'youtube']"/>
+        </a>
       <a href="https://www.facebook.com/lucas.pmm" target="_blank">
         <font-awesome-icon :icon="['fab', 'facebook']"/>
       </a>
