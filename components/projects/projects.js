@@ -31,6 +31,11 @@ const otherProjects = [
     site: "https://github.com/lucasmedeiros/youtube-videomaker",
   },
   {
+    title: 'mp-damas',
+    description: "Checkers game with Python and Pygame.",
+    site: 'https://github.com/lucasmedeiros/mp_damas'
+  },
+  {
     title: 'profile-finder',
     description: `A React application with Apollo for consuming data from Github's GraphQL API, by fetching data from Github users from the given username.`,
     site: 'https://github.com/lucasmedeiros/profile-finder',
