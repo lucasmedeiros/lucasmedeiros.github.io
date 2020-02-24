@@ -1,3 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-export default () => <h1>On development...</h1>
+export default () => {
+
+    useEffect(() => {
+        console.log("Componente montou.")
+    }, []);
+
+    return (
+        <main className='container'>
+            <h2>Olá mundo mano como assim</h2>
+        </main>
+    );
+}
