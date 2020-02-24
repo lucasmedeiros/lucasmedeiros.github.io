@@ -1,32 +1,25 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "lukehxh.github.io/portfolio",
-  "author": "LukeHxH",
-  "private": true,
+  "description": "Meu portfolio :)",
+  "main": "index.js",
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "test": "test",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/lucasmedeiros/portfolio.git"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasmedeiros/portfolio.git"
+  },
+  "author": "Lucas de Medeiros",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucasmedeiros/portfolio/issues"
+  },
+  "homepage": "https://github.com/lucasmedeiros/portfolio#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.16",
-    "@fortawesome/free-brands-svg-icons": "^5.8.0",
-    "@fortawesome/free-solid-svg-icons": "^5.8.0",
-    "@fortawesome/vue-fontawesome": "^0.1.6",
-    "cross-env": "^5.2.0",
-    "nuxt": "^2.6.2",
-    "nuxt-fontawesome": "^0.4.0",
-    "vue": "^2.6.10",
-    "vue-smooth-scroll": "^1.0.13"
-  },
-  "devDependencies": {
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "node-sass": "^4.12.0",
-    "nodemon": "^1.18.9",
-    "prettier": "^1.18.2",
-    "sass-loader": "^7.1.0"
+    "gatsby": "^2.19.21",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   }
 }
