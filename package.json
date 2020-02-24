@@ -4,7 +4,6 @@
   "description": "Meu portfolio :)",
   "main": "index.js",
   "scripts": {
-    "test": "test",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/lucasmedeiros/portfolio.git"
   },
   "repository": {
