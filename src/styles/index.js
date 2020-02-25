@@ -4,6 +4,12 @@ import background from '../assets/background.jpg';
 
 export const Container = styled.div`
     color: #404040;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    flex: 1;
 `;
 
 export const Footer = styled.footer`
@@ -29,6 +35,7 @@ export const BackgroundContainer = styled.section`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,11 +51,41 @@ export const Main = styled.main`
 
 export const Wrapper = styled.div`
     margin: 0 auto;
-    max-width: 960px;
-    padding: 3em 0 8em 0;
+    max-width: 1080px;
+    padding: 4em 2em 8em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @media ${devices.laptop} {
+        padding: 4em 0 8em 0;
+        flex-direction: row;
+    }
+`;
+
+export const Card = styled.article`
+    border: 1px rgba(0,0,0,.125) solid;
+    border-radius: .30rem;
+    background-color: #fff;
+    background-clip: border-box;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+`;
+
+export const Grid = styled.section`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+
+    @media ${devices.tablet} {
+        grid-template-columns: repeat(3, 1fr);
+    }
 `;
 
 export const RoundedImage = styled.img`

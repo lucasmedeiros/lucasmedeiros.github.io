@@ -1,9 +1,11 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     Container,
     BackgroundContainer,
     Wrapper,
-    RoundedImage
+    RoundedImage,
+    Grid
 } from '../styles';
 
 import {
@@ -21,17 +23,35 @@ export default () => {
             <SEO title="Home" keywords={[`lucas medeiros`, `developer`, `application`, `react`]} />
             <Container>
                 <BackgroundContainer>
-                    <RoundedImage src={Photo} />
+                    <h1 className='text-center text-white'>Full-stack software development</h1>
                 </BackgroundContainer>
 
                 <Wrapper>
-                    <h1 className='font-bold w-full'>Summary</h1>
-                    <p className='font-sans sm:font-serif md:font-mono lg:font-sans'>
-                        My full name's Lucas de Medeiros Nunes Fernandes, I'm {calculateAge()} years old and I live in Campina Grande - PB, Brazil.
-                        I have a diverse set of skills, ranging from basic HTML + CSS + Javascript, all the way to React, API (GraphQL and REST)
-                        development with Node, Flask or SpringBoot, and mobile development with React Native. Besides Computer Science, I love football
-                        (or soccer, whatever) and I'm a Flamengo supporter. I also love music and gaming.
-                    </p>
+                    <Container>
+                        <h1 className='font-bold'>Summary</h1>
+                        <RoundedImage style={{ marginBottom: '5%' }} src={Photo} />
+                        <p className='font-sans sm:font-serif md:font-mono lg:font-sans w-full'>
+                            My full name's Lucas de Medeiros Nunes Fernandes, I'm {calculateAge()} years old and I live in Campina Grande - PB, Brazil.
+                            I have a diverse set of skills, ranging from basic HTML + CSS + Javascript, all the way to React, API (GraphQL and REST)
+                            development with Node, Flask or SpringBoot, and mobile development with React Native. Besides Computer Science, I love football
+                            (or soccer, whatever) and I'm a Flamengo supporter. I also love music and gaming.
+                        </p>
+                    </Container>
+                    <Container className='md:ml-5 h-full'>
+                        <h1 className='font-bold'>Skills</h1>
+
+                        <Grid>
+                            <FontAwesomeIcon className='text-orange-400' icon={['fab', 'html5']} size='6x' />
+                            <FontAwesomeIcon className='text-blue-400' icon={['fab', 'css3-alt']} size='6x' />
+                            <FontAwesomeIcon className='text-yellow-400' icon={['fab', 'js']} size='6x' />
+                            <FontAwesomeIcon className='text-blue-700' icon={['fab', 'react']} size='6x' />
+                            <FontAwesomeIcon className='text-green-700' icon={['fab', 'node']} size='6x' />
+                            <FontAwesomeIcon className='text-green-300' icon={['fab', 'android']} size='6x' />
+                            <FontAwesomeIcon className='text-blue-300' icon={['fab', 'apple']} size='6x' />
+                            <FontAwesomeIcon className='text-blue-400' icon={['fab', 'python']} size='6x' />
+                            <FontAwesomeIcon className='text-orange-700' icon={['fab', 'java']} size='6x' />
+                        </Grid>
+                    </Container>
                 </Wrapper>
             </Container>
         </Layout>

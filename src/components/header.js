@@ -4,11 +4,11 @@ import { navbarStyle } from '../styles';
 
 const Header = ({ siteTitle }) => {
     const [scrollTop, setScrollTop] = useState(true);
+    const [isExpanded, setExpanded] = useState(false);
     const [navbarColor, setNavbarColor] = useState({
         background: `none`,
         color: `#000`
     });
-    const [isExpanded, setExpanded] = useState(false);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -31,15 +31,15 @@ const Header = ({ siteTitle }) => {
             });
         } else {
             setNavbarColor({
-                background: `none`,
+                background: isExpanded ? "#000" : `none`,
                 color: `#000`
             });
         }
-    }, [scrollTop]);
+    }, [scrollTop, isExpanded]);
 
 
     function handleScroll() {
-        let breakpoint = window.innerHeight * 0.5;
+        let breakpoint = window.innerHeight * 0.1;
         if (window.scrollY > breakpoint)
             setScrollTop(false);
         else
