@@ -1,20 +1,27 @@
 import styled from 'styled-components';
+import devices from './devices';
 
 export const Container = styled.div`
     color: #404040;
-    padding: 0 0 1em 0;
+    padding: 1em 0 1em 0;
 `;
 
 export const Footer = styled.footer`
     width: 100%;
-    height: 200px;
+    min-height: 200px;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
     background-color: black;
     color: white;
+
+    @media ${devices.tablet} {
+        flex-direction: row;
+        text-align: left;
+    }
 `;
 
 export const Main = styled.main`
@@ -28,7 +35,7 @@ export const Wrapper = styled.div`
 `;
 
 export const navbarStyle = {
-    // position: 'fixed',
+    position: 'fixed',
     width: '100%',
     zIndex: 100,
     background: 'none',

@@ -2,6 +2,7 @@ module.exports = {
     title: 'Portfolio',
     siteUrl: `http://lucasfernandes.me`,
     description: 'Meu portfolio',
+    author: "Lucas Medeiros",
     social: [
         {
             name: "Github",
@@ -34,5 +35,10 @@ module.exports = {
             icon: "instagram",
         },
     ],
-    author: "Lucas de Medeiros",
+    email: [
+        "lucasmed812@gmail.com",
+        "lucas.medeiros.fernandes@ccc.ufcg.edu.br"
+    ],
+    whatsapp: "+55 (84) 99921-3854",
+    location: "Campina Grande, Brazil",
 };
