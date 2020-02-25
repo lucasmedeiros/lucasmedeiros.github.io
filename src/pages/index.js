@@ -5,18 +5,14 @@ import "../../node_modules/rsuite/dist/styles/rsuite-default.min.css"
 import {
     Layout,
     SEO,
-    Projects,
-    Work,
 } from '../components';
 
 export default () => {
     return (
-        <Layout>
+        <Layout breakpoint={(typeof window !== 'undefined') ? window.innerHeight - 125 : undefined} >
             <SEO title="Home" keywords={[`lucas medeiros`, `developer`, `application`, `react`]} />
             <Container>
-                <h2>Olá mundo</h2>
-                <Projects />
-                <Work />
+                <h2>Olá mundo, este é o meu portfolio, enchendo aqui com coisas que eu irei alterar depois...</h2>
             </Container>
         </Layout>
     );
