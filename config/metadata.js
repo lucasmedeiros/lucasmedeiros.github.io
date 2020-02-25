@@ -34,4 +34,5 @@ module.exports = {
             icon: "instagram",
         },
     ],
+    author: "Lucas de Medeiros",
 };

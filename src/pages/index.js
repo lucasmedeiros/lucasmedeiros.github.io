@@ -1,14 +1,23 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Container } from '../styles';
+import "../../node_modules/rsuite/dist/styles/rsuite-default.min.css"
+
+import {
+    Layout,
+    SEO,
+    Projects,
+    Work,
+} from '../components';
 
 export default () => {
-
-    useEffect(() => {
-        console.log("Componente montou.")
-    }, []);
-
     return (
-        <main className='container'>
-            <h2>Olá mundo mano como assim</h2>
-        </main>
+        <Layout>
+            <SEO title="Home" keywords={[`lucas medeiros`, `developer`, `application`, `react`]} />
+            <Container>
+                <h2>Olá mundo</h2>
+                <Projects />
+                <Work />
+            </Container>
+        </Layout>
     );
 }
