@@ -6,11 +6,12 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
-import { Footer, Main, Wrapper } from '../styles';
+import { Footer, Main } from '../styles';
 import Header from "./header";
-import "./layout.css";
 import { Social } from "./custom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import "../../node_modules/rsuite/dist/styles/rsuite-default.min.css";
+import "./layout.css";
 
 library.add(fab);
 
@@ -34,20 +35,16 @@ const Layout = ({ children, breakpoint }) => {
         }
     `);
 
-    console.log(data.site.siteMetadata.email)
-
     return (
         <Container>
             <Header siteTitle={data.site.siteMetadata.title} breakpoint={breakpoint} />
             <Main>
-                <Wrapper>
-                    {children}
-                </Wrapper>
+                {children}
             </Main>
             <Footer>
                 <div>
-                    {data.site.siteMetadata.email.map((email) => (
-                        <h6>
+                    {data.site.siteMetadata.email.map((email, index) => (
+                        <h6 key={index}>
                             <FontAwesomeIcon icon={faEnvelope} color='white' />
                             {` `}
                             {email}

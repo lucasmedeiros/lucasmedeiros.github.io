@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import devices from './devices';
+import background from '../assets/background.jpg';
 
 export const Container = styled.div`
     color: #404040;
-    padding: 1em 0 1em 0;
 `;
 
 export const Footer = styled.footer`
@@ -24,6 +24,20 @@ export const Footer = styled.footer`
     }
 `;
 
+export const BackgroundContainer = styled.section`
+    background-image: url(${background});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 65vh;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
+`;
+
 export const Main = styled.main`
     min-height: calc(100vh - 185px);
 `;
@@ -31,32 +45,24 @@ export const Main = styled.main`
 export const Wrapper = styled.div`
     margin: 0 auto;
     max-width: 960px;
-    padding: 0 1.0875rem 1.45rem;
+    padding: 3em 0 8em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const RoundedImage = styled.img`
+    border-radius: 50%;
+    max-width: 30vh;
 `;
 
 export const navbarStyle = {
     position: 'fixed',
     width: '100%',
     zIndex: 100,
-    background: 'none',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    transition: '0.75s ease-in-out',
-};
-
-export const navheaderStyle = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    height: '100%',
-};
-
-export const navlinkStyle = {
-    color: `#728f99`,
-    textShadow: '0px 0px 1px #ffffff',
-    margin: '0 0 0 30px',
-    textDecoration: `none`,
+    transition: '0.2s ease-in-out',
 };

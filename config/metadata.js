@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Portfolio',
+    title: 'Lucas Medeiros',
     siteUrl: `http://lucasfernandes.me`,
     description: 'Meu portfolio',
     author: "Lucas Medeiros",

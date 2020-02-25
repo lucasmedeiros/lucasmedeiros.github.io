@@ -6,6 +6,8 @@ module.exports = {
     plugins: [
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-plugin-nprogress`,
             options: {
@@ -56,6 +58,20 @@ module.exports = {
             options: {
                 javascriptEnabled: true,
             }
+        },
+        {
+            resolve: `gatsby-plugin-postcss`,
+            options: {
+                postCssPlugins: [require("tailwindcss"), require("autoprefixer")]
+            }
+        },
+        {
+            resolve: `gatsby-plugin-purgecss`,
+            options: {
+                printRejected: false,
+                develop: false,
+                tailwind: true,
+            },
         },
     ]
 }
