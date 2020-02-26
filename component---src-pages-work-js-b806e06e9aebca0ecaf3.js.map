@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/work.js"],"names":[],"mappings":"2FAAA,gCAEe,qBACX,OAAO","file":"component---src-pages-work-js-b806e06e9aebca0ecaf3.js","sourcesContent":["import React from 'react';\n\nexport default () => {\n    return <p>Trabalho aqui...</p>\n}\n"],"sourceRoot":""}
