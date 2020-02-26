@@ -39,7 +39,7 @@ const Header = ({ siteTitle }) => {
 
 
     function handleScroll() {
-        let breakpoint = window.innerHeight * 0.1;
+        let breakpoint = window.innerHeight * 0.2;
         if (window.scrollY > breakpoint)
             setScrollTop(false);
         else

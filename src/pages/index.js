@@ -2,30 +2,25 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     Container,
-    BackgroundContainer,
     Wrapper,
     RoundedImage,
     Grid
 } from '../styles';
-
 import {
     Layout,
     SEO,
 } from '../components';
-
 import Photo from '../assets/photo.jpg';
 import { calculateAge } from "../util";
 
 export default () => {
-
     return (
-        <Layout breakpoint={(typeof window !== 'undefined') ? window.innerHeight / 3 : undefined} >
+        <Layout
+            breakpoint={(typeof window !== 'undefined') ? window.innerHeight / 3 : undefined}
+            topComponent={() => <h1 className='text-center text-white'>Full-stack software development</h1>}
+        >
             <SEO title="Home" keywords={[`lucas medeiros`, `developer`, `application`, `react`]} />
-            <Container>
-                <BackgroundContainer>
-                    <h1 className='text-center text-white'>Full-stack software development</h1>
-                </BackgroundContainer>
-
+            <Container style={{ backgroundColor: 'white', zIndex: 2 }}>
                 <Wrapper>
                     <Container>
                         <h1 className='font-bold'>Summary</h1>

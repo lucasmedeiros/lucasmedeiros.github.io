@@ -1,7 +1,6 @@
 import React from "react";
 import {
     Container,
-    BackgroundContainer,
     Wrapper,
     RoundedImage
 } from '../styles';
@@ -17,13 +16,17 @@ import { calculateAge } from "../util";
 export default () => {
 
     return (
-        <Layout breakpoint={(typeof window !== 'undefined') ? window.innerHeight / 3 : undefined} >
-            <SEO title="About" keywords={[`lucas medeiros`, `sobre`, `about`]} />
-            <Container>
-                <BackgroundContainer>
+        <Layout
+            breakpoint={(typeof window !== 'undefined') ? window.innerHeight / 3 : undefined}
+            topComponent={() => (
+                <>
                     <RoundedImage src={Photo} />
                     <h1 className='font-bold text-white text-center'>Lucas de Medeiros Nunes Fernandes</h1>
-                </BackgroundContainer>
+                </>
+            )}
+        >
+            <SEO title="About" keywords={[`lucas medeiros`, `sobre`, `about`]} />
+            <Container>
 
                 <Wrapper>
                     <h1 className='font-bold w-full'>About me</h1>

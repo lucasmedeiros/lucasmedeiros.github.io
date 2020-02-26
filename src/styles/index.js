@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import devices from './devices';
-import background from '../assets/background.jpg';
+import Background from '../assets/background.jpg';
 
 export const Container = styled.div`
     color: #404040;
@@ -10,10 +10,12 @@ export const Container = styled.div`
     width: 100%;
     flex-wrap: wrap;
     flex: 1;
+    z-index: 1;
 `;
 
 export const Footer = styled.footer`
     width: 100%;
+    padding: 1em 0 1em 0;
     min-height: 200px;
     position: relative;
     display: flex;
@@ -31,11 +33,10 @@ export const Footer = styled.footer`
 `;
 
 export const BackgroundContainer = styled.section`
-    background-image: url(${background});
+    background-image: url(${Background});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +44,7 @@ export const BackgroundContainer = styled.section`
     width: 100%;
     height: 65vh;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
+    z-index: -1;
 `;
 
 export const Main = styled.main`
@@ -50,16 +52,17 @@ export const Main = styled.main`
 `;
 
 export const Wrapper = styled.div`
-    margin: 0 auto;
-    max-width: 1080px;
-    padding: 4em 2em 8em 2em;
+    width: 100%;
+    padding: 2em 2em 8em 2em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
+    z-index: 2;
+    background-color: white;
 
     @media ${devices.laptop} {
-        padding: 4em 0 8em 0;
+        padding: 2em 8em 8em 8em;
         flex-direction: row;
     }
 `;

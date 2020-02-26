@@ -5,17 +5,18 @@ import { Container } from 'rsuite';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { Parallax } from 'react-scroll-parallax';
 
-import { Footer, Main } from '../styles';
+import { Footer, Main, BackgroundContainer, } from '../styles';
 import Header from "./header";
 import { Social } from "./custom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import "../../node_modules/rsuite/dist/styles/rsuite-default.min.css";
+import { ParallaxProvider } from 'react-scroll-parallax';
 import "./layout.css";
 
 library.add(fab);
 
-const Layout = ({ children, breakpoint }) => {
+const Layout = ({ children, breakpoint, topComponent: Top, showTopComponent = true }) => {
     const data = useStaticQuery(graphql`
         query SiteTitleQuery {
             site {
@@ -36,45 +37,52 @@ const Layout = ({ children, breakpoint }) => {
     `);
 
     return (
-        <Container>
-            <Header siteTitle={data.site.siteMetadata.title} breakpoint={breakpoint} />
-            <Main>
-                {children}
-            </Main>
-            <Footer>
-                <div>
-                    {data.site.siteMetadata.email.map((email, index) => (
-                        <h6 key={index}>
-                            <FontAwesomeIcon icon={faEnvelope} color='white' />
+        <ParallaxProvider>
+            <Container>
+                <Header siteTitle={data.site.siteMetadata.title} breakpoint={breakpoint} />
+                <Main>
+                    {showTopComponent && <Parallax className="w-full" y={[-30, 20]}>
+                        <BackgroundContainer>
+                            <Top />
+                        </BackgroundContainer>
+                    </Parallax>}
+                    {children}
+                </Main>
+                <Footer>
+                    <div>
+                        {data.site.siteMetadata.email.map((email, index) => (
+                            <h6 style={{ marginBottom: '3%' }} key={index}>
+                                <FontAwesomeIcon icon={faEnvelope} color='white' />
+                                {` `}
+                                {email}
+                            </h6>
+                        ))}
+                        <h6 style={{ marginBottom: '3%' }}>
+                            <FontAwesomeIcon icon={['fab', 'whatsapp']} color='white' />
                             {` `}
-                            {email}
+                            {data.site.siteMetadata.whatsapp}
                         </h6>
-                    ))}
-                    <h6>
-                        <FontAwesomeIcon icon={['fab', 'whatsapp']} color='white' />
-                        {` `}
-                        {data.site.siteMetadata.whatsapp}
-                    </h6>
-                    <h6>
-                        <FontAwesomeIcon icon={faMapMarkerAlt} color='white' />
-                        {` `}
-                        {data.site.siteMetadata.location}
-                    </h6>
-                </div>
-                <div style={{ maxWidth: "200px", textAlign: 'center' }}>
-                    {data.site.siteMetadata.author}{` `}
-                    © {new Date().getFullYear()}, Built with
+                        <h6 style={{ marginBottom: '3%' }}>
+                            <FontAwesomeIcon icon={faMapMarkerAlt} color='white' />
+                            {` `}
+                            {data.site.siteMetadata.location}
+                        </h6>
+                    </div>
+                    <div style={{ maxWidth: "200px", textAlign: 'center', marginBottom: '5%', marginTop: '2%' }}>
+                        {data.site.siteMetadata.author}{` `}
+                        © {new Date().getFullYear()}, Built with
                     {` `}
-                    <a href="https://www.gatsbyjs.org">Gatsby</a>
-                </div>
-                <div>
-                    {data.site.siteMetadata.social
-                        ? <Social data={data.site.siteMetadata.social} />
-                        : null
-                    }
-                </div>
-            </Footer>
-        </Container>
+                        <a href="https://www.gatsbyjs.org">Gatsby</a>
+                    </div>
+                    <div>
+                        {data.site.siteMetadata.social
+                            ? <Social data={data.site.siteMetadata.social} />
+                            : null
+                        }
+                    </div>
+                </Footer>
+            </Container>
+        </ParallaxProvider>
     )
 }
 
