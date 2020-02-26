@@ -4,7 +4,7 @@
   "description": "Meu portfolio :)",
   "main": "index.js",
   "scripts": {
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/lucasmedeiros/portfolio.git"
+    "build": "gatsby build --prefix-paths"
   },
   "repository": {
     "type": "git",
@@ -48,7 +48,5 @@
     "styled-components": "^5.0.1",
     "tailwindcss": "^1.2.0"
   },
-  "devDependencies": {
-    "gh-pages": "^2.2.0"
-  }
+  "devDependencies": {}
 }
