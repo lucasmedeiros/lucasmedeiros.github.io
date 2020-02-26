@@ -84,3 +84,4 @@ dist
 sw.*
 
 config.js
+public/
