@@ -47,5 +47,8 @@
     "rsuite": "^4.2.1",
     "styled-components": "^5.0.1",
     "tailwindcss": "^1.2.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
