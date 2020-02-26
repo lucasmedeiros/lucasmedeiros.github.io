@@ -1,14 +1,12 @@
 language: node_js
 before_script:
   - npm install -g gatsby
+  - npm install -g gh-pages
 node_js:
   - "12"
 deploy:
   provider: script
   script: npm install && npm run deploy
   skip_cleanup: true
-  with:
-    COSMIC_READ_KEY: ${{ secrets.COSMIC_READ_KEY }}
-    COSMIC_BUCKET_SLUG: ${{ secrets.COSMIC_BUCKET_SLUG }}
   on:
     branch: master
