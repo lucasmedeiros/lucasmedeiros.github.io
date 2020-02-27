@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "gatsby";
 import { navbarStyle } from '../styles';
-import { useController } from 'react-scroll-parallax';
+import { ParallaxContext } from 'react-scroll-parallax';
 
 const Header = ({ siteTitle }) => {
-    const { parallaxController } = useController();
+    const parallaxController = useContext(ParallaxContext);
     const [scrollTop, setScrollTop] = useState(true);
     const [isExpanded, setExpanded] = useState(false);
     const [navbarColor, setNavbarColor] = useState({ background: `none`, color: `#000` });
 
     useEffect(() => {
         window.requestAnimationFrame(() => {
-            parallaxController.update()
+            if (parallaxController) {
+                parallaxController.update();
+            }
         })
     })
 
