@@ -7,7 +7,9 @@ export default ({ name, description, url, image, className = '' }) => {
             <ProjectImageContainer
                 className='bg-gray-300'
             >
-                <ProjectImage src={image} />
+                <a href={url}>
+                    <ProjectImage src={image} />
+                </a>
             </ProjectImageContainer>
             <ProjectHeader>
                 <a href={url}>{name}</a>
