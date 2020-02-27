@@ -6,7 +6,10 @@ import Photo from '../assets/photo.jpg';
 import { calculateAge } from "../util";
 
 export default () => {
-    const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    let vw = 0;
+    if (typeof window !== "undefined") {
+        vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    }
     return (
         <Layout
             breakpoint={(typeof window !== 'undefined') ? window.innerHeight / 3 : undefined}
