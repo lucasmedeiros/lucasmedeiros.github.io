@@ -7,9 +7,6 @@ import { calculateAge } from "../util";
 
 export default () => {
     const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-
-    console.log(vw)
     return (
         <Layout
             breakpoint={(typeof window !== 'undefined') ? window.innerHeight / 3 : undefined}
@@ -31,7 +28,7 @@ export default () => {
                     <Container className='md:ml-5 p-5 h-full bg-gray-100 shadow-lg'>
                         <h1 className='font-bold'>Skills</h1>
 
-                        <Grid>
+                        <Grid min={110}>
                             <FontAwesomeIcon className='text-orange-400' icon={['fab', 'html5']} size='6x' />
                             <FontAwesomeIcon className='text-blue-400' icon={['fab', 'css3-alt']} size='6x' />
                             <FontAwesomeIcon className='text-yellow-400' icon={['fab', 'js']} size='6x' />

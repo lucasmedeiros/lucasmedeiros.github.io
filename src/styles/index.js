@@ -81,15 +81,12 @@ export const Card = styled.article`
 export const Grid = styled.section`
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(${props => props.min || 400}px, 1fr));
     grid-gap: 20px;
     grid-auto-rows: 1fr;
     justify-items: center;
     align-items: center;
-
-    @media ${devices.tablet} {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    grid-auto-rows: 1fr;
 `;
 
 export const RoundedImage = styled.img`

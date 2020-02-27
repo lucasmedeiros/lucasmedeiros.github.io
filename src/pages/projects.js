@@ -1,8 +1,9 @@
 import React from "react";
 import { graphql } from 'gatsby';
-import { Container, Wrapper, Grid } from '../../styles';
+import { Container, Wrapper, Grid } from '../styles';
 
-import { Layout, SEO } from '../../components';
+import { Layout, SEO } from '../components';
+import { ProjectCard } from "../components/custom";
 
 export default ({ data }) => {
     const projects = data.allCosmicjsProjects.edges.sort((p1, p2) => {
@@ -21,17 +22,25 @@ export default ({ data }) => {
             <SEO title="Projects" keywords={[`lucas medeiros`, `projetos`, `projects`]} />
             <Container>
                 <Wrapper>
-                    <Container className='bg-white' style={{ marginTop: '-10%' }}>
+                    <Container>
                         <Grid>
                             {projects.map((project, index) => {
-                                const { link, name } = project.node.metadata;
+                                const { link, name, description, image } = project.node.metadata;
                                 return (
-                                    <div key={index}>
-                                        <a target='_blank' rel="noopener noreferrer" href={link}>{name}</a>
-                                    </div>
+                                    <ProjectCard
+                                        className='shadow-lg'
+                                        name={name}
+                                        url={link}
+                                        image={image.url || 'https://www.victorromero.com.br/wp-content/uploads/2019/03/image-placeholder-350x350-300x300.png'}
+                                        description={description}
+                                        key={index}
+                                    />
                                 )
                             })}
                         </Grid>
+                        <p className='w-full mt-3'>
+                            For more, visit my <a className='text-blue-600' href='https://github.com/lucasmedeiros'>Github page</a>.
+                        </p>
                     </Container>
                 </Wrapper>
             </Container>
