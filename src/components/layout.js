@@ -41,7 +41,7 @@ const Layout = ({ children, breakpoint, topComponent: Top, showTopComponent = tr
             <Container>
                 <Header siteTitle={data.site.siteMetadata.title} breakpoint={breakpoint} />
                 <Main>
-                    {showTopComponent && <Parallax className="w-full" y={[-30, 20]}>
+                    {showTopComponent && <Parallax className="w-full" y={[-78, 50]}>
                         <BackgroundContainer>
                             <Top />
                         </BackgroundContainer>

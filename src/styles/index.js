@@ -53,7 +53,7 @@ export const Main = styled.main`
 
 export const Wrapper = styled.div`
     width: 100%;
-    padding: 2em 2em 8em 2em;
+    padding: 2em 2em 4em 2em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -62,7 +62,7 @@ export const Wrapper = styled.div`
     background-color: white;
 
     @media ${devices.laptop} {
-        padding: 2em 8em 8em 8em;
+        padding: 2em 8em 4em 8em;
         flex-direction: row;
     }
 `;
@@ -80,15 +80,13 @@ export const Card = styled.article`
 
 export const Grid = styled.section`
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(${props => props.min || 400}px, 1fr));
     grid-gap: 20px;
     grid-auto-rows: 1fr;
     justify-items: center;
     align-items: center;
-
-    @media ${devices.tablet} {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    grid-auto-rows: 1fr;
 `;
 
 export const RoundedImage = styled.img`

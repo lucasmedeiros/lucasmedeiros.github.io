@@ -11,7 +11,7 @@ module.exports = {
         },
         {
             name: "Dev",
-            url: "hhttps://dev.to/lukehxh",
+            url: "https://dev.to/lukehxh",
             icon: "dev",
         },
         {

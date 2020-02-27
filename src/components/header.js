@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import { navbarStyle } from '../styles';
+import { useController } from 'react-scroll-parallax';
 
 const Header = ({ siteTitle }) => {
+    const { parallaxController } = useController();
     const [scrollTop, setScrollTop] = useState(true);
     const [isExpanded, setExpanded] = useState(false);
-    const [navbarColor, setNavbarColor] = useState({
-        background: `none`,
-        color: `#000`
-    });
+    const [navbarColor, setNavbarColor] = useState({ background: `none`, color: `#000` });
+
+    useEffect(() => {
+        window.requestAnimationFrame(() => {
+            parallaxController.update()
+        })
+    })
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -47,7 +52,7 @@ const Header = ({ siteTitle }) => {
     }
 
     return (
-        <nav style={{ ...navbarStyle, ...navbarColor }} className="flex items-center justify-between flex-wrap p-6">
+        <nav style={{ ...navbarStyle, ...navbarColor }} className={`flex items-center justify-between flex-wrap ${scrollTop ? 'p-6' : 'p-4'}`}>
             <div className="flex items-center flex-shrink-0 text-white mr-6">
                 <Link to='/' className="font-bold text-xl">{siteTitle}</Link>
             </div>
