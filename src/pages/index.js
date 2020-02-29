@@ -6,10 +6,6 @@ import Photo from '../assets/photo.jpg';
 import { calculateAge } from "../util";
 
 export default () => {
-    let vw = 0;
-    if (typeof window !== "undefined") {
-        vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    }
     return (
         <Layout
             breakpoint={(typeof window !== 'undefined') ? window.innerHeight / 3 : undefined}
@@ -18,7 +14,7 @@ export default () => {
             <SEO title="Home" keywords={[`lucas medeiros`, `developer`, `application`, `react`]} />
             <Container style={{ backgroundColor: 'white', zIndex: 2 }}>
                 <Wrapper>
-                    <Container className='bg-gray-200 p-5 shadow-lg' style={{ marginTop: vw >= 660 ? '-10%' : '0' }}>
+                    <Container className='bg-gray-200 p-5 shadow-lg negative-margin'>
                         <h1 className='font-bold'>Summary</h1>
                         <RoundedImage style={{ marginBottom: '5%' }} src={Photo} />
                         <p className='font-sans sm:font-serif md:font-mono lg:font-sans w-full'>

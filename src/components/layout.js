@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import { Container } from 'rsuite';
@@ -36,10 +36,39 @@ const Layout = ({ children, breakpoint, topComponent: Top, showTopComponent = tr
         }
     `);
 
+    const [scrollTop, setScrollTop] = useState(true);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            window.addEventListener('scroll', handleScroll)
+        }
+    }, []); // Will mount
+
+    useEffect(() => {
+        return () => {
+            if (typeof window !== 'undefined')
+                window.removeEventListener('scroll', handleScroll)
+        }
+    }, []); // Will unmount
+
+    function handleScroll() {
+        let breakpoint = window.innerHeight * 0.2;
+        if (window.scrollY > breakpoint)
+            setScrollTop(false);
+        else
+            setScrollTop(true);
+    }
+
+    useEffect(() => {
+        if (!scrollTop) {
+            // show go to top
+        }
+    }, [scrollTop]);
+
     return (
         <ParallaxProvider>
             <Container>
-                <Header siteTitle={data.site.siteMetadata.title} breakpoint={breakpoint} />
+                <Header scrollTop={scrollTop} siteTitle={data.site.siteMetadata.title} breakpoint={breakpoint} />
                 <Main>
                     {showTopComponent && <Parallax className="w-full" y={[-78, 50]}>
                         <BackgroundContainer>

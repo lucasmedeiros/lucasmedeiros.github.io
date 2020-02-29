@@ -8,6 +8,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-bottom: 15px;
     flex-wrap: wrap;
     flex: 1;
     z-index: 1;
@@ -53,7 +54,7 @@ export const Main = styled.main`
 
 export const Wrapper = styled.div`
     width: 100%;
-    padding: 2em 2em 4em 2em;
+    padding: 2em 1em 4em 1em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -81,7 +82,7 @@ export const Card = styled.article`
 export const Grid = styled.section`
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(${props => props.min || 400}px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(${props => props.min || 350}px, 1fr));
     grid-gap: 20px;
     grid-auto-rows: 1fr;
     justify-items: center;

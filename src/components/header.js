@@ -3,9 +3,8 @@ import { Link } from "gatsby";
 import { navbarStyle } from '../styles';
 import { ParallaxContext } from 'react-scroll-parallax';
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, scrollTop }) => {
     const parallaxController = useContext(ParallaxContext);
-    const [scrollTop, setScrollTop] = useState(true);
     const [isExpanded, setExpanded] = useState(false);
     const [navbarColor, setNavbarColor] = useState({ background: `none`, color: `#000` });
 
@@ -16,19 +15,6 @@ const Header = ({ siteTitle }) => {
             }
         })
     })
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            window.addEventListener('scroll', handleScroll)
-        }
-    }, []); // Will mount
-
-    useEffect(() => {
-        return () => {
-            if (typeof window !== 'undefined')
-                window.removeEventListener('scroll', handleScroll)
-        }
-    }, []); // Will unmount
 
     useEffect(() => {
         if (!scrollTop) {
@@ -43,15 +29,6 @@ const Header = ({ siteTitle }) => {
             });
         }
     }, [scrollTop, isExpanded]);
-
-
-    function handleScroll() {
-        let breakpoint = window.innerHeight * 0.2;
-        if (window.scrollY > breakpoint)
-            setScrollTop(false);
-        else
-            setScrollTop(true);
-    }
 
     return (
         <nav style={{ ...navbarStyle, ...navbarColor }} className={`flex items-center justify-between flex-wrap ${scrollTop ? 'p-6' : 'p-4'}`}>

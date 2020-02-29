@@ -7,7 +7,7 @@ export const ProjectContainer = styled.article`
         "image content content"
         "image content content";
     width: 100%;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 0.5fr 1fr;
     grid-template-rows: auto;
     margin: 20px 0 20px 0;
     box-shadow: 1px 1px 3px 0 #111;
@@ -40,15 +40,15 @@ export const ProjectContent = styled.div`
     color: #AAAAAA;
     font-size: 0.8em;
     padding: 1rem 1.5rem 1rem 1.5rem;
-    min-height: 120px;
+    min-height: 100px;
     text-transform: uppercase;
 `;
 
 export const ProjectImage = styled.img`
-    width: 170px;
-    height: 190px;
+    width: 160px;
+    height: 160px;
     position: absolute;
-    top: -8px;
+    top: -2%;
     left: 10px;
     box-shadow: 2px 2px 10px 0 #111;
 `;
