@@ -5,7 +5,7 @@ node_js:
   - "stable"
 cache:
   directories:
-  - node_modules
+    - node_modules
 
 install:
   - npm install
@@ -28,5 +28,4 @@ jobs:
         keep-history: true
         local_dir: public
         on:
-           branch: master
-
+          branch: master

@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 h1 {
-    font-size: 2em;
-    margin: .67em 0;
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
 .negative-margin {
-    margin-top: -10%;
+  margin-top: -10%;
 }
 
 @media (max-width: 768px) {
-    .negative-margin {
-        margin-top: 0;
-    }
+  .negative-margin {
+    margin-top: 0;
+  }
 }
