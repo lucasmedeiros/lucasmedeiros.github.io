@@ -5,6 +5,8 @@ import { Container, Wrapper, Grid } from "../styles";
 import { Layout, SEO } from "../components";
 import { ProjectCard } from "../components/custom";
 
+import Placeholder from "../assets/placeholder.png";
+
 export default ({ data }) => {
   const projects = data.allCosmicjsProjects.edges.sort((p1, p2) => {
     const image1 = p1.node.metadata.image.url;
@@ -38,17 +40,16 @@ export default ({ data }) => {
                   link,
                   name,
                   description,
-                  image
+                  image,
+                  tags
                 } = project.node.metadata;
+                console.log(tags);
                 return (
                   <ProjectCard
-                    className="shadow-lg"
                     name={name}
+                    tags={tags}
                     url={link}
-                    image={
-                      image.url ||
-                      "https://www.victorromero.com.br/wp-content/uploads/2019/03/image-placeholder-350x350-300x300.png"
-                    }
+                    image={image.url || Placeholder}
                     description={description}
                     key={index}
                   />
@@ -84,6 +85,9 @@ export const query = graphql`
             link
             image {
               url
+            }
+            tags {
+              name
             }
           }
         }

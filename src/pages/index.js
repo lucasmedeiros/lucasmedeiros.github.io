@@ -26,7 +26,7 @@ export default () => {
           <Container className="bg-gray-200 p-5 shadow-lg">
             <h1 className="font-bold">Summary</h1>
             <RoundedImage style={{ marginBottom: "5%" }} src={Photo} />
-            <p className="font-sans sm:font-serif md:font-mono lg:font-sans w-full">
+            <p className="font-sans sm:font-serif md:font-mono px-10 lg:font-sans w-full">
               My full name's Lucas de Medeiros Nunes Fernandes, I'm{" "}
               {calculateAge()} years old and I live in Campina Grande - PB,
               Brazil. I have a diverse set of skills, ranging from basic HTML +
@@ -40,7 +40,7 @@ export default () => {
           <Container className="md:ml-5 p-5 h-full bg-gray-100 shadow-lg">
             <h1 className="font-bold">Skills</h1>
 
-            <Grid min={110}>
+            <Grid min={180}>
               <FontAwesomeIcon
                 className="text-orange-400"
                 icon={["fab", "html5"]}

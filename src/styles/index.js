@@ -62,7 +62,7 @@ export const Wrapper = styled.div`
   z-index: 2;
   background-color: white;
 
-  @media ${devices.laptop} {
+  @media ${devices.laptopL} {
     padding: 2em 8em 4em 8em;
     flex-direction: row;
   }
