@@ -7,8 +7,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  margin-bottom: 15px;
   flex-wrap: wrap;
   flex: 1;
   z-index: 1;
@@ -39,13 +37,18 @@ export const BackgroundContainer = styled.section`
   background-position: center;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   width: 100%;
-  height: 60vh;
+  height: 100vh;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
   z-index: -1;
+  position: relative;
+
+  @media ${devices.laptop} {
+    height: 75vh;
+  }
 `;
 
 export const Main = styled.main`
@@ -54,18 +57,14 @@ export const Main = styled.main`
 
 export const Wrapper = styled.div`
   width: 100%;
-  padding: 2em 1em 4em 1em;
+  padding: 2em 0 2em 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   z-index: 2;
   background-color: white;
-
-  @media ${devices.laptopL} {
-    padding: 2em 8em 4em 8em;
-    flex-direction: row;
-  }
 `;
 
 export const Card = styled.article`
@@ -84,18 +83,20 @@ export const Grid = styled.section`
   width: 100%;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(${props => props.min || 350}px, 1fr)
+    minmax(${props => props.min || 300}px, 1fr)
   );
   grid-gap: 20px;
   grid-auto-rows: 1fr;
   justify-items: center;
-  align-items: center;
-  grid-auto-rows: 1fr;
 `;
 
 export const RoundedImage = styled.img`
   border-radius: 50%;
-  max-width: 30vh;
+  max-width: 24vh;
+
+  @media ${devices.laptopL} {
+    max-width: 12vw;
+  }
 `;
 
 export const navbarStyle = {

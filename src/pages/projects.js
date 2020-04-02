@@ -28,13 +28,14 @@ export default ({ data }) => {
       )}
     >
       <SEO
-        title="Projects"
+        title="Projetos"
         keywords={[`lucas medeiros`, `projetos`, `projects`]}
       />
       <Container>
         <Wrapper>
-          <Container>
-            <Grid>
+          <Container className="w-full" style={{ maxWidth: "80%" }}>
+            <h1 className="font-bold text-4xl mb-10">PROJETOS</h1>
+            <Grid min={350}>
               {projects.map((project, index) => {
                 const {
                   link,
@@ -43,7 +44,6 @@ export default ({ data }) => {
                   image,
                   tags
                 } = project.node.metadata;
-                console.log(tags);
                 return (
                   <ProjectCard
                     name={name}
@@ -56,7 +56,7 @@ export default ({ data }) => {
                 );
               })}
             </Grid>
-            <p className="w-full mt-3">
+            <p className="w-full mt-5">
               For more, visit my{" "}
               <a
                 className="text-blue-600"

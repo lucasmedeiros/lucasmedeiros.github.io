@@ -41,7 +41,7 @@ const Header = ({ siteTitle, scrollTop }) => {
       }`}
     >
       <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <Link to="/" className="font-bold text-xl">
+        <Link to="/" className="font-bold" style={{ fontSize: "2em" }}>
           {siteTitle}
         </Link>
       </div>
@@ -70,22 +70,18 @@ const Header = ({ siteTitle, scrollTop }) => {
           <Link
             to={`/projects`}
             href="#responsive-header"
-            className={`transition duration-500 ease-in-out block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-900 hover:bg-gray-200 rounded mr-4 p-2`}
+            className={`transition duration-500 ease-in-out block mt-4 lg:inline-block lg:mt-0 text-white rounded mr-4 p-2`}
+            style={{ fontSize: "1.4em" }}
           >
-            Projects
+            Projetos
           </Link>
-          <Link
-            to={`/about`}
-            className={`transition duration-500 ease-in-out block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-900 hover:bg-gray-200 rounded mr-4 p-2`}
+          <a
+            href="https://docs.google.com/document/d/1YXlPsjreNnV_LHGrYAuW1QdI59xpjEHc3j1_2ZVInt8/edit"
+            className={`transition duration-500 ease-in-out block mt-4 lg:inline-block lg:mt-0 text-white rounded mr-4 p-2`}
+            style={{ fontSize: "1.4em" }}
           >
-            About
-          </Link>
-          <Link
-            to={`/contact`}
-            className={`transition duration-500 ease-in-out block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-900 hover:bg-gray-200 rounded mr-4 p-2`}
-          >
-            Contact
-          </Link>
+            CV
+          </a>
         </div>
       </div>
     </nav>

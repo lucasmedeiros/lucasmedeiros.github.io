@@ -1,26 +1,21 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
-import { Container } from "rsuite";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { Footer, Main, BackgroundContainer } from "../styles";
+import { Footer, Main, BackgroundContainer, RoundedImage } from "../styles";
 import Header from "./header";
 import { Social } from "./custom";
 import "./layout.css";
+import Photo from "../assets/photo.jpg";
 
 library.add(fab);
 
-const Layout = ({
-  children,
-  breakpoint,
-  topComponent: Top,
-  showTopComponent = true
-}) => {
+const Layout = ({ children, breakpoint, showTopComponent = true }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -67,7 +62,7 @@ const Layout = ({
 
   return (
     <ParallaxProvider>
-      <Container>
+      <div>
         <Header
           scrollTop={scrollTop}
           siteTitle={data.site.siteMetadata.title}
@@ -75,9 +70,29 @@ const Layout = ({
         />
         <Main>
           {showTopComponent && (
-            <Parallax className="w-full" y={[-85, 50]}>
+            <Parallax className="w-full" y={[-70, 50]}>
               <BackgroundContainer>
-                <Top />
+                <div className="flex flex-col items-center justify-center">
+                  <RoundedImage src={Photo} />
+                  <h1 className="font-bold text-white text-center">
+                    Lucas de Medeiros Nunes Fernandes
+                  </h1>
+                  <div>
+                    {data.site.siteMetadata.social ? (
+                      <Social
+                        size={"3x"}
+                        data={data.site.siteMetadata.social}
+                      />
+                    ) : null}
+                  </div>
+                </div>
+                <Link
+                  to="/projects"
+                  className="text-white mt-2 absolute bottom-0 pb-1 border-b-2 mb-5"
+                  style={{ fontSize: "1.4em" }}
+                >
+                  Ver projetos >
+                </Link>
               </BackgroundContainer>
             </Parallax>
           )}
@@ -122,7 +137,7 @@ const Layout = ({
             ) : null}
           </div>
         </Footer>
-      </Container>
+      </div>
     </ParallaxProvider>
   );
 };

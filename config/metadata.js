@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Lucas Medeiros",
+  title: "Portfolio",
   siteUrl: `http://lucasfernandes.me`,
   description: "Meu portfolio",
   author: "Lucas Medeiros",
@@ -23,11 +23,6 @@ module.exports = {
       name: "YouTube",
       url: "https://www.youtube.com/channel/UCLlxw0ys56q3t0JJhPOw4-w/videos",
       icon: "youtube"
-    },
-    {
-      name: "Facebook",
-      url: "https://www.facebook.com/lucas.pmm",
-      icon: "facebook"
     }
   ],
   email: ["lucasmed812@gmail.com", "lucas.medeiros.fernandes@ccc.ufcg.edu.br"],

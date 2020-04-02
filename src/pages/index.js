@@ -1,8 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container, Wrapper, RoundedImage, Grid } from "../styles";
+import { Container, Wrapper, Grid } from "../styles";
 import { Layout, SEO } from "../components";
-import Photo from "../assets/photo.jpg";
 import { calculateAge } from "../util";
 
 export default () => {
@@ -11,11 +10,6 @@ export default () => {
       breakpoint={
         typeof window !== "undefined" ? window.innerHeight / 3 : undefined
       }
-      topComponent={() => (
-        <h1 className="text-center text-white">
-          Full-stack software development
-        </h1>
-      )}
     >
       <SEO
         title="Home"
@@ -23,24 +17,39 @@ export default () => {
       />
       <Container style={{ backgroundColor: "white", zIndex: 2 }}>
         <Wrapper>
-          <Container className="bg-gray-200 p-5 shadow-lg">
-            <h1 className="font-bold">Summary</h1>
-            <RoundedImage style={{ marginBottom: "5%" }} src={Photo} />
-            <p className="font-sans sm:font-serif md:font-mono px-10 lg:font-sans w-full">
-              My full name's Lucas de Medeiros Nunes Fernandes, I'm{" "}
-              {calculateAge()} years old and I live in Campina Grande - PB,
-              Brazil. I have a diverse set of skills, ranging from basic HTML +
-              CSS + Javascript, all the way to React, API (GraphQL and REST)
-              development with Node, Flask or SpringBoot, and mobile development
-              with React Native. Besides Computer Science, I love football (or
-              soccer, whatever) and I'm a Flamengo supporter. I also love music
-              and gaming.
-            </p>
+          <Container className="w-10/12 bg-gray-200 p-10 shadow-lg mb-10">
+            <h1 className="font-bold text-4xl mb-10">SOBRE MIM</h1>
+            <div
+              className="font-sans sm:font-serif md:font-mono md:px-10 pb-5 lg:font-sans w-full"
+              style={{ fontSize: "1.3em" }}
+            >
+              <p>
+                Meu nome completo é Lucas de Medeiros Nunes Fernandes, tenho{" "}
+                {calculateAge()} anos de idade e moro em Campina Grande - PB,
+                Brasil. Minhas habilidades vão desde HTML, CSS e Javacript
+                básicos até React, desenvolvimento de API's (GraphQL e REST) com
+                Node, Flask e Springboot, e desenvolvimento mobile com React
+                Native. Há 2 anos desenvolvo aplicações web em trabalhos,
+                projetos pessoais ou envolvimento em atividades acadêmicas,
+                trabalhando tanto com backend, quanto no frontend. No âmbito
+                acadêmico, fui monitor de Programação 2 e atualmente sou membro
+                da OpenDev UFCG, organização que visa incentivar o
+                desenvolvimento em código aberto na comunidade acadêmica de
+                Computação@UFCG.
+              </p>
+              <p className="mt-10">
+                Quanto à minha formação, sou estudante de Ciência da Computação
+                na Universidade Federal de Campina Grande (UFCG), cursando o
+                sétimo período. Sou técnico em informática, formado em 2016,
+                pelo Instituto Federal do Rio Grande do Norte (IFRN) - Campus
+                Caicó.
+              </p>
+            </div>
           </Container>
-          <Container className="md:ml-5 p-5 h-full bg-gray-100 shadow-lg">
-            <h1 className="font-bold">Skills</h1>
+          <Container className="w-10/12 p-10 h-full">
+            <h1 className="font-bold text-4xl mb-10">SKILLS</h1>
 
-            <Grid min={180}>
+            <Grid min={100}>
               <FontAwesomeIcon
                 className="text-orange-400"
                 icon={["fab", "html5"]}
