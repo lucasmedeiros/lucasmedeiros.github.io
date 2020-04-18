@@ -15,7 +15,12 @@ import Photo from "../assets/photo.jpg";
 
 library.add(fab);
 
-const Layout = ({ children, breakpoint, showTopComponent = true }) => {
+const Layout = ({
+  children,
+  breakpoint,
+  showTopComponent = true,
+  page = undefined,
+}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -86,13 +91,15 @@ const Layout = ({ children, breakpoint, showTopComponent = true }) => {
                     ) : null}
                   </div>
                 </div>
-                <Link
-                  to="/projects"
-                  className="text-white mt-2 absolute bottom-0 pb-1 border-b-2 mb-5"
-                  style={{ fontSize: "1.4em" }}
-                >
-                  Ver projetos >
-                </Link>
+                {page !== "projects" ? (
+                  <Link
+                    to="/projects"
+                    className="text-white mt-2 absolute bottom-0 pb-1 border-b-2 mb-5"
+                    style={{ fontSize: "1.4em" }}
+                  >
+                    Ver projetos >
+                  </Link>
+                ) : null}
               </BackgroundContainer>
             </Parallax>
           )}
@@ -123,7 +130,7 @@ const Layout = ({ children, breakpoint, showTopComponent = true }) => {
               maxWidth: "200px",
               textAlign: "center",
               marginBottom: "5%",
-              marginTop: "2%"
+              marginTop: "2%",
             }}
           >
             {data.site.siteMetadata.author}
@@ -143,7 +150,7 @@ const Layout = ({ children, breakpoint, showTopComponent = true }) => {
 };
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

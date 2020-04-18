@@ -21,11 +21,7 @@ export default ({ data }) => {
       breakpoint={
         typeof window !== "undefined" ? window.innerHeight / 3 : undefined
       }
-      topComponent={() => (
-        <h1 className="text-center text-white">
-          Full-stack software development
-        </h1>
-      )}
+      page="projects"
     >
       <SEO
         title="Projetos"
@@ -42,7 +38,7 @@ export default ({ data }) => {
                   name,
                   description,
                   image,
-                  tags
+                  tags,
                 } = project.node.metadata;
                 return (
                   <ProjectCard
