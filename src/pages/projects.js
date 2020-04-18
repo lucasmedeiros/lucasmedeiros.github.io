@@ -31,7 +31,7 @@ export default ({ data }) => {
         <Wrapper>
           <Container className="w-full" style={{ maxWidth: "80%" }}>
             <h1 className="font-bold text-4xl mb-10">PROJETOS</h1>
-            <Grid min={350}>
+            <Grid>
               {projects.map((project, index) => {
                 const {
                   link,

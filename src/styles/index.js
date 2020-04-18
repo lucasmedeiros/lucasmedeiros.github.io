@@ -81,13 +81,22 @@ export const Card = styled.article`
 export const Grid = styled.section`
   display: grid;
   width: 100%;
+  height: 100%;
   grid-template-columns: repeat(
-    auto-fit,
-    minmax(${props => props.min || 300}px, 1fr)
+    auto-fill,
+    minmax(${(props) => props.min || 250}px, 1fr)
   );
-  grid-gap: 20px;
+  grid-gap: 30px;
+  grid-auto-rows: 1fr;
   grid-auto-rows: 1fr;
   justify-items: center;
+
+  @media ${devices.laptopL} {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(${(props) => props.min || 350}px, 1fr)
+    );
+  }
 `;
 
 export const RoundedImage = styled.img`
@@ -107,5 +116,5 @@ export const navbarStyle = {
   flexDirection: "row",
   justifyContent: "space-between",
   alignItems: "center",
-  transition: "0.2s ease-in-out"
+  transition: "0.2s ease-in-out",
 };
