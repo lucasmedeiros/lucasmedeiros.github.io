@@ -6,7 +6,7 @@ export default ({ data, size = "2x", color = "white" }) =>
     <a
       key={index}
       href={social.url}
-      style={{ margin: "0 10px 0 10px" }}
+      className="mx-2"
       target="_blank"
       rel="noopener noreferrer"
     >
