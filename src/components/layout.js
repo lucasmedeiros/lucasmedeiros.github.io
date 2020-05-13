@@ -82,14 +82,9 @@ const Layout = ({
                   <h1 className="font-bold text-white text-center">
                     Lucas de Medeiros Nunes Fernandes
                   </h1>
-                  <div>
-                    {data.site.siteMetadata.social ? (
-                      <Social
-                        size={"3x"}
-                        data={data.site.siteMetadata.social}
-                      />
-                    ) : null}
-                  </div>
+                  {data.site.siteMetadata.social ? (
+                    <Social size={"3x"} data={data.site.siteMetadata.social} />
+                  ) : null}
                 </div>
                 {page !== "projects" ? (
                   <Link

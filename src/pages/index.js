@@ -49,7 +49,7 @@ export default () => {
           <Container className="w-10/12 p-10 h-full">
             <h1 className="font-bold text-4xl mb-10">SKILLS</h1>
 
-            <Grid min={100}>
+            <Grid min={180}>
               <FontAwesomeIcon
                 className="text-orange-400"
                 icon={["fab", "html5"]}
