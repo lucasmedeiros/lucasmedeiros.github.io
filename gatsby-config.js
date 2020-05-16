@@ -13,8 +13,8 @@ module.exports = {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: `#000`,
-        showSpinner: false
-      }
+        showSpinner: false,
+      },
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
@@ -22,27 +22,27 @@ module.exports = {
         fonts: [
           {
             family: `Oswald`,
-            subsets: [`latin`]
+            subsets: [`latin`],
           },
           {
             family: `Open Sans`,
-            variants: [`400`, `700`]
-          }
-        ]
-      }
+            variants: [`400`, `700`],
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        displayName: process.env.NODE_ENV !== "production"
-      }
+        displayName: process.env.NODE_ENV !== "production",
+      },
     },
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {
         path: `${__dirname}/src/pages`,
-        ignore: [`**/styles.js`]
-      }
+        ignore: [`**/styles.js`],
+      },
     },
     {
       resolve: `gatsby-source-cosmicjs`,
@@ -50,29 +50,29 @@ module.exports = {
         bucketSlug: process.env.COSMIC_BUCKET_SLUG,
         objectTypes: [`projects`],
         apiAccess: {
-          read_key: process.env.COSMIC_READ_KEY
-        }
-      }
+          read_key: process.env.COSMIC_READ_KEY,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-less`,
       options: {
-        javascriptEnabled: true
-      }
+        javascriptEnabled: true,
+      },
     },
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        postCssPlugins: [require("tailwindcss"), require("autoprefixer")]
-      }
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
+      },
     },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: false,
         develop: false,
-        tailwind: true
-      }
-    }
-  ]
+        tailwind: true,
+      },
+    },
+  ],
 };

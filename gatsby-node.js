@@ -8,7 +8,7 @@ exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions;
   const pageContext = {
     readKey: `${process.env.COSMIC_READ_KEY}`,
-    cosmicBucket: `${process.env.COSMIC_BUCKET_SLUG}`
+    cosmicBucket: `${process.env.COSMIC_BUCKET_SLUG}`,
   };
   if (process.env.NODE_ENV === "production") {
     pageContext.buildhookUrl = `${process.env.BUILDHOOK_ENDPOINT}`;
@@ -16,7 +16,7 @@ exports.onCreatePage = ({ page, actions }) => {
   deletePage(page);
   createPage({
     ...page,
-    context: pageContext
+    context: pageContext,
   });
 };
 
