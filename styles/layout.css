@@ -1,0 +1,13 @@
+body {
+    display: grid;
+    grid-template-areas: "nav main";
+    grid-template-columns: 1fr 5fr;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
